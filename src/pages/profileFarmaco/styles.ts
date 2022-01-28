@@ -127,3 +127,38 @@ export const RoomContainer = styled.div`
     transform: scale(1.1);
   }
 `;
+
+export const FooterDescContainer = styled.div`
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px -5px 10px #00000024;
+  padding: 10px;
+  gap: 1rem;
+`;
+
+export const DescContainer = styled.div`
+  width: 121px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  & h6 {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #003d81;
+  }
+
+  & span {
+    width: 60%;
+    height: 20px;
+    background: #ff0000 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+  }
+`;
