@@ -9,6 +9,7 @@ export const ProfileContainer = styled.div`
   align-items: center;
   grid-column: 2/6;
   padding-right: 2rem;
+  padding-top: 1rem;
 `;
 
 export const TowersContainer = styled.div`

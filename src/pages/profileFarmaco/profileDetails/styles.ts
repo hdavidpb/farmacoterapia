@@ -157,3 +157,29 @@ export const Check = styled.div`
     border-radius: 50%;
   }
 `;
+
+export const GraphContainer = styled.div`
+  position: relative;
+  width: 65vw;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1.5rem;
+
+  & label {
+    position: absolute;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: #4e5c6e;
+    left: -10%;
+    transform: rotate(-90deg);
+  }
+
+  @media (min-width: 1920px) {
+    margin-top: 3rem;
+    width: 70vw;
+  }
+`;
