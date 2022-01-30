@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import nutritionSlice from "./features/nutritionSlice";
+import alertsSlice from "./features/alerts/alertsSlice";
 
 export const store = configureStore({
   reducer: {
-    nutrition: nutritionSlice,
+    alerts: alertsSlice,
   },
 });
 

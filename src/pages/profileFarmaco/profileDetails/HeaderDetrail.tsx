@@ -1,13 +1,16 @@
+import ArrowButtonBack from "@components/ArrowButtonBack";
+import { setShowAlerts } from "@redux/features/alerts/alertsSlice";
+import { RootState } from "@redux/store";
 import React from "react";
 import { BsFillBellFill } from "react-icons/bs";
-import { FaAngleLeft } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import * as sc from "./styles";
 const HeaderDetrail = () => {
+  const dispatch = useDispatch();
+  const { showAlerts } = useSelector((store: RootState) => store.alerts);
   return (
     <sc.HeaderDetail>
-      <sc.ButtonBackContainer>
-        <FaAngleLeft size={30} color="#4E5C6E" />
-      </sc.ButtonBackContainer>
+      <ArrowButtonBack route="/profile" />
       <sc.PatientDataContainer>
         <sc.DescContainer>
           <h6>Nombre</h6>
@@ -26,7 +29,10 @@ const HeaderDetrail = () => {
           <p>Femenino</p>
         </sc.DescContainer>
       </sc.PatientDataContainer>
-      <sc.AlertsButton>
+      <sc.AlertsButton
+        showAlerts={showAlerts}
+        onClick={() => dispatch(setShowAlerts())}
+      >
         <BsFillBellFill size={20} />
         <h6>Alertas</h6>
       </sc.AlertsButton>

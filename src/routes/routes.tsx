@@ -5,6 +5,7 @@ import InterventionsPage from "@pages/intervenciones/InterventionsPage";
 import ProfilePage from "@pages/profileFarmaco/ProfilePage";
 import { useRoutes } from "react-router-dom";
 import ProfileDetail from "@pages/profileFarmaco/profileDetails/ProfileDetail";
+import FormAlerts from "@pages/profileFarmaco/formAlerts/FormAlerts";
 
 export const routes = [
   {
@@ -15,6 +16,7 @@ export const routes = [
   { path: "intervenciones", element: <InterventionsPage /> },
   { path: "conciliaciones", element: <ConciliationsPage /> },
   { path: "alertas-sanitarias", element: <AlertsPage /> },
+  { path: "alertas-sanitarias/:id", element: <FormAlerts /> },
   { path: "*", element: <h1>Not found</h1> },
 ];
 

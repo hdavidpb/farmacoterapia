@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface IProps {
   ckecked?: boolean;
+  showAlerts?: boolean;
 }
 
 export const HeaderDetail = styled.div`
@@ -34,12 +35,19 @@ export const AlertsButton = styled.button`
   justify-content: center;
   align-items: center;
   gap: 6px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
+
+  background: ${({ showAlerts }: IProps) =>
+    showAlerts
+      ? "#CDCFFE 0% 0% no-repeat padding-box;"
+      : "#ffffff 0% 0% no-repeat padding-box"};
+
+  box-shadow: ${({ showAlerts }: IProps) =>
+    showAlerts ? "none" : "0px 3px 6px #00000029"};
   border-radius: 6px;
   color: #4e5c6e;
   cursor: pointer;
   border: none;
+  transition: all 0.4s;
   & h6 {
     margin-bottom: 0;
     font-size: 15px;
